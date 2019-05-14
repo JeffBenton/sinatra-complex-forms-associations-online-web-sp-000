@@ -33,7 +33,8 @@ class PetsController < ApplicationController
     erb :'/pets/edit'
   end
 
-  patch '/pets/:id' do 
+  patch '/pets/:id' do
+    binding.pry
     if params[:owner_id]
       @pet = Pet.update(params[:id], name: params[:pet_name], owner_id: params[:owner_id])
     else
