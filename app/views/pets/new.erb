@@ -9,7 +9,7 @@
 
   <br>
   <% @owners.each do |owner| %>
-    <input type="radio" name="owner_name" value="<%= owner.id %>" id="<%= owner.id %>"><%= owner.name %></input>
+    <input type="checkbox" name="owner_name" value="<%= owner.id %>" id="<%= owner.id %>"><%= owner.name %></input>
   <% end %>
   and/or, create a new owner:
   <br>
