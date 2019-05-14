@@ -35,7 +35,8 @@ class PetsController < ApplicationController
 
   patch '/pets/:id' do 
     binding.pry
-    
+    if !params[:owner][:name].empty?
+      
     redirect to "pets/#{@pet.id}"
   end
 end
