@@ -10,7 +10,8 @@ class PetsController < ApplicationController
     erb :'/pets/new'
   end
 
-  post '/pets' do 
+  post '/pets' do
+    @pet = Pat.new()
     binding.pry
     redirect to "pets/#{@pet.id}"
   end
