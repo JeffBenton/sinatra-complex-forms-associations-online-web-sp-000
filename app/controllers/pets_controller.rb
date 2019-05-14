@@ -11,7 +11,8 @@ class PetsController < ApplicationController
   end
 
   post '/pets' do
-    @pet = Pat.new()
+    
+    @pet = Pat.new(name: params[:pet_name], owner_id: params[:owner_id])
     binding.pry
     redirect to "pets/#{@pet.id}"
   end
