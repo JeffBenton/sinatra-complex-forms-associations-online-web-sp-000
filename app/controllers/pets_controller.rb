@@ -37,7 +37,7 @@ class PetsController < ApplicationController
     if params[:owner_name].empty?
       @pet = Pet.update(params[:id], name: params[:pet_name], owner_id: params[:owner_id])
     else
-      @owner = Owner.create(params[:owner_name])
+      # @owner = Owner.create(params[:owner_name])
       # @pet = Pet.update(params[:id], name: params[:pet_name], owner_id: @owner.id)
       # @owner.pets << @pet
       binding.pry
